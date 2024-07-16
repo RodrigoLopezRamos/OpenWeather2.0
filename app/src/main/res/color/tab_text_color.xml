@@ -1,0 +1,5 @@
+<!-- res/color/tab_text_color.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="#000000" /> <!-- Set your desired color for the selected state -->
+    <item android:state_selected="false" android:color="#FFFFFF" /> <!-- Set your desired color for the unselected state -->
+</selector>

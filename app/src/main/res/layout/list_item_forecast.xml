@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/weather_green"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/small_margin"
+    android:paddingBottom="@dimen/default_margin"
+    android:paddingStart="@dimen/default_margin"
+    android:paddingEnd="@dimen/default_margin">
+
+    <TextView
+        android:id="@+id/highTemp"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toTopOf="@id/lowTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/lowTemp"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/highTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highTemp" />
+
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday, November 17"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toStartOf="@id/weatherIcon"
+        app:layout_constraintStart_toEndOf="@id/highTemp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/windSpeed"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Wind Speed"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/date" />
+
+    <TextView
+        android:id="@+id/windSpeedValue"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/micro_margin"
+        android:text="19 mph"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="@id/windSpeed"
+        app:layout_constraintTop_toBottomOf="@id/windSpeed" />
+
+    <TextView
+        android:id="@+id/windSpeedDirection"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/micro_margin"
+        android:text="NW"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="@id/windSpeedValue"
+        app:layout_constraintTop_toBottomOf="@id/windSpeedValue" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="@dimen/extra_large_margin"
+        android:src="@drawable/common_google_signin_btn_icon_dark"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weatherDescription"
+        style="@style/BlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partly Cloudy"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weatherIcon" />
+
+    <!-- Add more TextViews for other fields if needed -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

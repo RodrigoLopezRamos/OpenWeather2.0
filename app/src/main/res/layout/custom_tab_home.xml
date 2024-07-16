@@ -1,0 +1,32 @@
+<!-- custom_tab_item.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_margin">
+
+
+    <ImageView
+        android:id="@+id/tab_icon"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_home_selector"
+        app:layout_constraintBottom_toTopOf="@+id/tab_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tab_text"
+        style="@style/BoldBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
